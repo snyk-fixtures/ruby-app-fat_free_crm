@@ -41,7 +41,7 @@ group :development do
   # don't load these gems in travis
   unless ENV["CI"]
     gem 'thin'
-    gem 'quiet_assets'
+    gem 'quiet_assets', '>= 1.1.0'
     gem 'capistrano'
     gem 'capistrano-bundler'
     gem 'capistrano-rails'
@@ -56,8 +56,8 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'rspec-activemodel-mocks'
+  gem 'rspec-rails', '>= 3.5.2'
+  gem 'rspec-activemodel-mocks', '>= 1.0.3'
   gem 'headless'
   gem 'byebug'
   gem 'pry-rails' unless ENV["CI"]
@@ -70,7 +70,7 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver', '< 3.0.0'
   gem 'database_cleaner'
-  gem "acts_as_fu"
+  gem "acts_as_fu", ">= 0.0.9"
   gem 'zeus' unless ENV["CI"]
   gem 'timecop'
 end
@@ -80,8 +80,8 @@ group :heroku do
   gem 'rails_12factor'
 end
 
-gem 'sass-rails'
-gem 'coffee-rails'
+gem 'sass-rails', '>= 5.0.6'
+gem 'coffee-rails', '>= 4.2.2'
 gem 'uglifier'
 gem 'execjs'
 gem 'therubyracer', platform: :ruby unless ENV["CI"]
