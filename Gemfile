@@ -56,7 +56,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 3.5.2'
   gem 'rspec-activemodel-mocks'
   gem 'headless'
   gem 'byebug'
@@ -70,7 +70,7 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver', '< 3.0.0'
   gem 'database_cleaner'
-  gem "acts_as_fu"
+  gem "acts_as_fu", ">= 0.0.9"
   gem 'zeus' unless ENV["CI"]
   gem 'timecop'
 end
@@ -80,8 +80,8 @@ group :heroku do
   gem 'rails_12factor'
 end
 
-gem 'sass-rails'
-gem 'coffee-rails'
+gem 'sass-rails', '>= 5.0.8'
+gem 'coffee-rails', '>= 4.2.2'
 gem 'uglifier'
 gem 'execjs'
 gem 'therubyracer', platform: :ruby unless ENV["CI"]
