@@ -32,7 +32,7 @@ spec.runtime_dependencies.each do |dep|
 end
 
 # Remove premailer auto-require
-gem 'premailer', require: false
+gem 'premailer', '>= 1.9.0', require: false
 
 # Remove fat_free_crm dependency, to stop it from being auto-required too early.
 remove 'fat_free_crm'
@@ -67,7 +67,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '>= 2.11.0'
   gem 'selenium-webdriver', '< 3.0.0'
   gem 'database_cleaner'
   gem "acts_as_fu"
