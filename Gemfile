@@ -56,7 +56,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 3.5.2'
   gem 'rspec-activemodel-mocks'
   gem 'headless'
   gem 'byebug'
@@ -80,8 +80,8 @@ group :heroku do
   gem 'rails_12factor'
 end
 
-gem 'sass-rails'
-gem 'coffee-rails'
+gem 'sass-rails', '>= 5.0.6'
+gem 'coffee-rails', '>= 4.2.2'
 gem 'uglifier'
 gem 'execjs'
 gem 'therubyracer', platform: :ruby unless ENV["CI"]
