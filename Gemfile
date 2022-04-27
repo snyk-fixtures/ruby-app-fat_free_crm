@@ -81,7 +81,7 @@ group :heroku do
 end
 
 gem 'sass-rails'
-gem 'coffee-rails'
+gem 'coffee-rails', '>= 4.2.2'
 gem 'uglifier'
 gem 'execjs'
 gem 'therubyracer', platform: :ruby unless ENV["CI"]
