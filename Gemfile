@@ -80,7 +80,7 @@ group :heroku do
   gem 'rails_12factor'
 end
 
-gem 'sass-rails'
+gem 'sass-rails', '>= 6.0.0'
 gem 'coffee-rails'
 gem 'uglifier'
 gem 'execjs'
