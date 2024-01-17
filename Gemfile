@@ -57,7 +57,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'rspec-activemodel-mocks'
+  gem 'rspec-activemodel-mocks', '>= 1.1.0'
   gem 'headless'
   gem 'byebug'
   gem 'pry-rails' unless ENV["CI"]
