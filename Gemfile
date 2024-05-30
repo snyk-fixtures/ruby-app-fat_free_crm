@@ -56,18 +56,18 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 3.6.0'
   gem 'rspec-activemodel-mocks'
   gem 'headless'
   gem 'byebug'
   gem 'pry-rails' unless ENV["CI"]
-  gem 'factory_girl_rails', '~> 4.7.0' # 4.8.0+ stubbed models are not allowed to access the database - User#destroyed?()
+  gem 'factory_girl_rails', '~> 4.8.0' # 4.8.0+ stubbed models are not allowed to access the database - User#destroyed?()
   gem 'rubocop'
   gem 'rainbow', '< 2.2.1' # https://github.com/fatfreecrm/fat_free_crm/issues/551
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '>= 2.12.0'
   gem 'selenium-webdriver', '< 3.0.0'
   gem 'database_cleaner'
   gem "acts_as_fu"
@@ -80,9 +80,9 @@ group :heroku do
   gem 'rails_12factor'
 end
 
-gem 'sass-rails'
-gem 'coffee-rails'
+gem 'sass-rails', '>= 5.0.7'
+gem 'coffee-rails', '>= 4.2.2'
 gem 'uglifier'
 gem 'execjs'
 gem 'therubyracer', platform: :ruby unless ENV["CI"]
-gem 'nokogiri', '>= 1.6.8'
+gem 'nokogiri', '>= 1.16.5'
