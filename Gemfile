@@ -80,9 +80,9 @@ group :heroku do
   gem 'rails_12factor'
 end
 
-gem 'sass-rails'
+gem 'sass-rails', '>= 6.0.0'
 gem 'coffee-rails'
 gem 'uglifier'
 gem 'execjs'
 gem 'therubyracer', platform: :ruby unless ENV["CI"]
-gem 'nokogiri', '>= 1.6.8'
+gem 'nokogiri', '>= 1.15.7'
