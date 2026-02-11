@@ -32,7 +32,7 @@ spec.runtime_dependencies.each do |dep|
 end
 
 # Remove premailer auto-require
-gem 'premailer', require: false
+gem 'premailer', '>= 1.9.1', require: false
 
 # Remove fat_free_crm dependency, to stop it from being auto-required too early.
 remove 'fat_free_crm'
@@ -40,35 +40,35 @@ remove 'fat_free_crm'
 group :development do
   # don't load these gems in travis
   unless ENV["CI"]
-    gem 'thin'
+    gem 'thin', '>= 1.7.1'
     gem 'quiet_assets'
-    gem 'capistrano'
-    gem 'capistrano-bundler'
-    gem 'capistrano-rails'
+    gem 'capistrano', '>= 3.7.2'
+    gem 'capistrano-bundler', '>= 1.3.0'
+    gem 'capistrano-rails', '>= 1.2.3'
     gem 'capistrano-rvm'
-    gem 'guard'
+    gem 'guard', '>= 2.14.1'
     gem 'guard-rspec'
-    gem 'guard-rails'
-    gem 'rb-inotify', require: false
+    gem 'guard-rails', '>= 0.8.1'
+    gem 'rb-inotify', '>= 0.9.8', require: false
     gem 'rb-fsevent', require: false
     gem 'rb-fchange', require: false
   end
 end
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'rspec-activemodel-mocks'
+  gem 'rspec-rails', '>= 3.6.0'
+  gem 'rspec-activemodel-mocks', '>= 1.1.0'
   gem 'headless'
   gem 'byebug'
   gem 'pry-rails' unless ENV["CI"]
-  gem 'factory_girl_rails', '~> 4.7.0' # 4.8.0+ stubbed models are not allowed to access the database - User#destroyed?()
-  gem 'rubocop'
+  gem 'factory_girl_rails', '~> 4.8.0' # 4.8.0+ stubbed models are not allowed to access the database - User#destroyed?()
+  gem 'rubocop', '>= 0.49.0'
   gem 'rainbow', '< 2.2.1' # https://github.com/fatfreecrm/fat_free_crm/issues/551
 end
 
 group :test do
-  gem 'capybara'
-  gem 'selenium-webdriver', '< 3.0.0'
+  gem 'capybara', '>= 2.12.0'
+  gem 'selenium-webdriver', '~> 3.0'
   gem 'database_cleaner'
   gem "acts_as_fu"
   gem 'zeus' unless ENV["CI"]
@@ -80,9 +80,9 @@ group :heroku do
   gem 'rails_12factor'
 end
 
-gem 'sass-rails'
-gem 'coffee-rails'
+gem 'sass-rails', '>= 6.0.0'
+gem 'coffee-rails', '>= 4.2.2'
 gem 'uglifier'
 gem 'execjs'
 gem 'therubyracer', platform: :ruby unless ENV["CI"]
-gem 'nokogiri', '>= 1.6.8'
+gem 'nokogiri', '>= 1.13.6'
